@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbot</title>
+    <!-- Add any CSS styles here -->
+    <style>
+      /* Your styles here */
+      #chat-container {
+        height: 300px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form id="chat-form">
+        <textarea
+          id="question-input"
+          rows="4"
+          cols="50"
+          placeholder="Type your question here"
+        ></textarea>
+        <br />
+        <button type="submit">Ask</button>
+        
+      </form>
+      <br />
+     
+      <div id="chat-container">
+        <!-- Chat responses will be displayed here -->
+      </div>
+      <button type="Button" id="delete-btn">Delete Chat</button>
+    </div>
+
+    <!-- Add Socket.io client script -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
