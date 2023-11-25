@@ -2,7 +2,7 @@ const baseURL = "https://chatbot-goodspace.onrender.com";
 // const baseURL = "http://localhost:3020";
 const socket = io(baseURL);
 
-const apiUrl = `${baseURL}/api/v1/getMessages`;
+const getChatsUrl = `${baseURL}/api/v1/getMessages`;
 const deleteChatUrl = `${baseURL}/api/v1/deleteMessages`;
 
 // Get DOM elements
@@ -13,7 +13,7 @@ const deleteChatBtn = document.getElementById("delete-btn");
 
 async function fetchData() {
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(getChatsUrl);
 
     if (!response.ok) {
       throw new Error("Network response was not ok");
