@@ -80,6 +80,7 @@ deleteChatBtn.addEventListener("click", async (e) => {
     }
 
     const data = await response.json();
+    chatContainer.innerHTML = "";
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error; // Re-throwing the error for handling at a higher level if necessary
