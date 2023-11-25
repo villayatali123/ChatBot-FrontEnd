@@ -3,16 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Chatbot</title>
-    <!-- Add any CSS styles here -->
-    <style>
-      /* Your styles here */
-      #chat-container {
-        height: 300px;
-        overflow-y: scroll;
-        border: 1px solid #ccc;
-        padding: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="./index.css">
   </head>
   <body>
     <div>
@@ -24,7 +16,7 @@
           placeholder="Type your question here"
         ></textarea>
         <br />
-        <button type="submit">Ask</button>
+        <button class="button button-primary" type="submit">Ask</button>
         
       </form>
       <br />
@@ -32,7 +24,7 @@
       <div id="chat-container">
         <!-- Chat responses will be displayed here -->
       </div>
-      <button type="Button" id="delete-btn">Delete Chat</button>
+      <button class="button button-secondary"type="Button" id="delete-btn">Delete Chat</button>
     </div>
 
     <!-- Add Socket.io client script -->

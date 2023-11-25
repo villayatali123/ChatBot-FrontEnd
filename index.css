@@ -1,0 +1,58 @@
+* {
+    font-size: medium;
+    font-family: "Trirong", serif;
+}
+
+#chat-container {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+#chat-container div {
+    border-radius: 15px; /* Adjust the radius as needed */
+    padding: 10px; /* Optional: Add padding for better visualization */
+}
+
+#chat-container div:nth-child(odd){
+
+    background-color: #edeaea;
+  
+  }
+/* Base Button Styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Primary Button Styles */
+  .button-primary {
+    color: #fff;
+    background-color: #3498db;
+  }
+  
+  .button-primary:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Secondary Button Styles */
+  .button-secondary {
+    color: #2c3e50;
+    background-color: #ecf0f1;
+  }
+  
+  .button-secondary:hover {
+    background-color: #c81e03;
+  }
+  
+  .button:hover {
+    color: #fff;
+  }
+  
