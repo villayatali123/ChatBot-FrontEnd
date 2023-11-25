@@ -1,8 +1,9 @@
-const socket = io("https://chatbot-goodspace.onrender.com");
+const baseURL = "https://chatbot-goodspace.onrender.com";
+// const baseURL = "http://localhost:3020";
+const socket = io(baseURL);
 
-const apiUrl = "https://chatbot-goodspace.onrender.com/api/v1/getMessages";
-const deleteChatUrl =
-  "https://chatbot-goodspace.onrender.com/api/v1/deleteMessages";
+const apiUrl = `${baseURL}/api/v1/getMessages`;
+const deleteChatUrl = `${baseURL}/api/v1/deleteMessages`;
 
 // Get DOM elements
 const chatForm = document.getElementById("chat-form");
@@ -51,7 +52,7 @@ chatForm.addEventListener("submit", async (e) => {
 
   if (question !== "") {
     // Send the question to the server
-    socket.emit("ask-question", { message: question });
+    socket.emit("ask-question", { userPrompt: question });
     // Add the question to chat display
     chatContainer.innerHTML += `<div>YOU:  ${question}</div>`;
     // Clear the input
