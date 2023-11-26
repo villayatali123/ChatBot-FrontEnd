@@ -23,17 +23,20 @@ async function fetchData() {
     const content = data.message.map((item, index) => {
       const div = document.createElement("div");
 
-      if (index % 2 == 0) div.textContent = `You:  ${item.message}`;
-      else div.textContent = `Bot:  ${item.message}`;
+      if (index % 2 == 0) div.textContent = `You:  ${item.message || "error displaying message"}`;
+      else div.textContent = `Bot:  ${item.message || "error displaying message"}`; 
       return div;
     });
 
-    chatContainer.innerHTML = ""; // Clear the container first (if needed)
+    // Clear the container first (if needed)
+    chatContainer.innerHTML = ""; 
 
     content.forEach((element) => {
-      chatContainer.appendChild(element); // Append each created div element to the container
+    // Append each created div element to the container
+      chatContainer.appendChild(element); 
     });
-    return data; // You can return the data if needed for further processing
+    // You can return the data if needed for further processing
+    return data; 
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error; // Re-throwing the error for handling at a higher level if necessary
@@ -43,7 +46,6 @@ async function fetchData() {
 // Call the async function
 fetchData();
 
-// const content = data.map(item => `<p>${item}</p>`).join('');
 
 // Submit form event
 chatForm.addEventListener("submit", async (e) => {
